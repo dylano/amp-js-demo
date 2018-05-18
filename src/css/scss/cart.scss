@@ -1,0 +1,118 @@
+.cart{
+  h1{
+    margin: 40px 0 80px;
+  }
+  .header{
+    display: flex;
+    justify-content: space-around;
+    height: 20px;
+
+    .thumbnail, .desc, .quantity, .price, .subtotal{
+      font-weight: bold;
+    }
+    .thumbnail{
+      flex: 1 1 10%;
+      text-align: center;
+    }
+    .desc{
+      flex: 0 1 40%;
+      padding-left: 76px;
+      text-align: left;
+    }
+    .quantity{
+      flex: 0 1 10%;
+      text-align: center;
+    }
+    .price, .subtotal{
+      flex: 0 1 20%;
+      text-align: center;
+    }
+  }
+  .items{
+    border-bottom: 0.5px solid #ccc;
+
+    .item{
+      display: flex;
+      justify-content: space-around;
+      height: 100px;
+      margin: 40px 0;
+      overflow: hidden;
+
+      .thumbnail{
+        flex: 1 1 10%;
+        text-align: center;
+
+        img{
+          height: 76px;
+        }
+      }
+      .desc{
+        flex: 0 1 40%;
+
+        .name{
+          font-size: 14px;
+          font-weight: bold;
+        }
+        .description{
+          margin-top: 10px;
+          font-size: 13px;
+        }
+      }
+      .quantity{
+        flex: 0 1 10%;
+        text-align: center;
+      }
+      .price{
+        flex: 20%;
+        text-align: center;
+        
+        &:before{
+          content: "$"
+        }
+      }
+      .subtotal{
+        flex: 0 1 20%;
+        font-weight: bold;
+        text-align: center;
+        
+        &:before{
+          content: "$"
+        }
+      }
+    }
+  }
+  .summary{
+    margin-top: 30px;
+    padding: 0 7%;
+    text-align: right;
+
+    .total, .discountTotal{
+      font-weight: bold;
+
+      &:before{
+        content: "$"
+      }
+    }
+    .discount{
+      margin-top: 10px;
+      padding-bottom: 5px;
+      font-size: 13px;
+    }
+    .discountTotal{
+      margin-top: 20px;
+      font-size: 18px;
+    }
+    .cartBtn{
+      margin-top: 30px;
+      background: rgb(45, 149, 250);
+      color: white;
+      text-align: center;
+      line-height: 44px;
+      cursor: pointer;
+
+      &:hover{
+        background:rgb(22, 112, 250);
+      }
+    }
+  }
+}
